@@ -1,4 +1,4 @@
-    :root {
+:root {
     --primary-color: #1a237e;
     --secondary-color: #303f9f;
     --accent-color: #ffd700;
@@ -130,7 +130,7 @@ nav ul li a:hover {
        padding-right: 0;
     }
     header{
-        width: 100%;
+        width: 350px;
     }
    
     .top-img{
@@ -138,18 +138,18 @@ nav ul li a:hover {
     }
     
     h1 {
-        font-size: 1.2em;
-        width: 70%;
+        font-size: 1.5em;
+        width: 100%;
     }
     
     .subtitle {
         font-size: 10px;
-        width: 90%;
+        width: 100%;
         text-align: center;
     }
     .header-text {
         font-size: 14px;
-        width: 80%;
+        width: 100%;
         text-align: center;
         
     }
@@ -289,9 +289,9 @@ footer {
     
 }
 
-@media (max-width: 480px) {
+@media (width < 480px) {
     nav{
-        width: 100%;
+        width: 350px;
     }
    
     nav ul {
@@ -325,20 +325,22 @@ footer {
     }
     #carShowcase{
         margin-left: 10px;
+        width: 400px;
         
     }
     #carShowcase h2{
         width: 40%;
     }
     #contact{
-        width: 90%;
+        width: 300px;
         margin-left: 10px;
+        margin-right: 50px;
     }
     footer{
         font-size: 14px;
         margin-left: 10px;
-        width: 98%;
+        width: 320px;
         
-        max-width: 100%;
+        
     }
 }
