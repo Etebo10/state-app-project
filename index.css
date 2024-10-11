@@ -130,7 +130,7 @@ nav ul li a:hover {
        padding-right: 0;
     }
     header{
-        width: 350px;
+        width: 400px;
     }
    
     .top-img{
@@ -291,7 +291,7 @@ footer {
 
 @media (width < 480px) {
     nav{
-        width: 350px;
+        width: 400px;
     }
    
     nav ul {
@@ -325,7 +325,7 @@ footer {
     }
     #carShowcase{
         margin-left: 10px;
-        width: 400px;
+        width: 390px;
         
     }
     #carShowcase h2{
@@ -333,13 +333,13 @@ footer {
     }
     #contact{
         width: 300px;
-        margin-left: 10px;
+        margin-left: 50px;
         margin-right: 50px;
     }
     footer{
         font-size: 14px;
         margin-left: 10px;
-        width: 320px;
+        width: 400px;
         
         
     }
