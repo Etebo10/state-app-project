@@ -16,29 +16,25 @@
         </div>
         <div class="back">
             <div class="stripe"></div>
-            <div class="box">
-                <span>cvv</span>
-                <div class="cvv-box"></div>
-                <img src="C:\Users\HP\Desktop\my codes.com\projects2\src\web photos\chip.png" alt="##">
-            </div>
+            <div class="box"></div>
         </div>
-    </div><br><br>
+    </div>
+    <br><br>
 
     <form action="" onsubmit="return validateForm()">
-                   <h3>Owner's Information</h3>
-            <div class="inputBox">
-                <span>First Name</span>
-               <input type="text" name="firstName" required>
-            </div>
-            <div class="inputBox">
-                <span>Middle Name</span>
-                <input type="text" name="middleName" required>
-            </div>
-            <div class="inputBox">
-                <span>Last Name</span>
-                <input type="text" name="lastName" required>
-            </div>
-      
+        <h3>Driver's Information</h3>
+        <div class="inputBox">
+            <span>First Name (as seen on license)</span>
+            <input type="text" name="firstName" required>
+        </div>
+        <div class="inputBox">
+            <span>Middle Name (as seen on license)</span>
+            <input type="text" name="middleName" required>
+        </div>
+        <div class="inputBox">
+            <span>Last Name (as seen on license)</span>
+            <input type="text" name="lastName" required>
+        </div>
         <div class="inputBox">
             <span>Date of Birth</span>
             <input type="date" class="card-holder-input" name="dob" required>
@@ -92,26 +88,46 @@
         </div>
         <div class="inputBox">
             <span>License Number</span>
-            <input type="text" class="card-holder-input" name="license" required>
+            <input type="number" class="card-holder-input" name="license" required>
+        </div>
+        <div class="inputBox">
+            <span>Driver's Phone Number</span>
+            <input type="number" class="card-holder-input" name="phone" required>
+        </div>
+        <div class="inputBox">
+            <span>Upload Driver's Photo:</span>
+            <input type="file" name="driverPhoto" accept="image/*" required>
         </div>
         <br><br>
 
         <h3>Vehicle Information</h3>
         <div class="inputBox">
-            <span>Model</span>
+            <span>Vehicle Type (e.g Sinotruk P300)</span>
             <input type="text" name="model" required>
         </div>
         <div class="inputBox">
-            <span>Chasis No.</span>
-            <input type="number" name="chasisNo" required>
+            <span>Vehicle Plate Number</span>
+            <input type="text" name="plateNumber" pattern="[A-Za-z0-9]+" required>
         </div>
         <div class="inputBox">
-            <span>Engine No.</span>
-            <input type="number" name="engineNo" required>
+            <span>Vehicle Owner's Name</span>
+            <input type="text" name="ownerName" required>
         </div>
         <div class="inputBox">
-            <span>Reg. Num.</span>
-            <input type="text" name="regNum" pattern="[A-Za-z0-9]+" required>
+            <span>Owner's Phone Number (optional)</span>
+            <input type="tel" name="ownerPhone" >
+        </div>
+        <div class="inputBox">
+            <span>Vehicle Roof Rack Compliance Status</span>
+            <select name="roofRackCompliance" required>
+                <option value="">Select Status</option>
+                <option value="compliant">Compliant</option>
+                <option value="non-compliant">Non-Compliant</option>
+            </select>
+        </div>
+        <div class="inputBox">
+            <span>Upload Vehicle's Photo:</span>
+            <input type="file" name="vehiclePhoto" accept="image/*" required>
         </div>
         <br><br>
 
@@ -135,29 +151,25 @@
     </form>
 
     <div class="footer-text">
-    <h3>@ 2024, Endorsed by Ogun State Traffic Compliance And Enforcement Corps</h3>
-    <img src="transport jpegs/trace image.jpg" alt="TRACE Logo" width="50px">
-</div>
+        <h3>@ 2024, Endorsed by Ogun State Traffic Compliance And Enforcement Corps</h3>
+        <img src="transport jpegs/trace image.jpg" alt="TRACE Logo" width="50px">
+    </div>
 </div>
 
 <script>
     function validateForm() {
         let form = document.forms[0];
-        let chasisNo = form['chasisNo'].value;
-        let engineNo = form['engineNo'].value;
-        let regNum = form['regNum'].value;
+        let plateNumber = form['plateNumber'].value;
 
-    
-        if (isNaN(chasisNo) || isNaN(engineNo)) {
-            alert("Please enter numeric values only for Chasis No and Engine No.");
+        
+        if (!/^[A-Za-z0-9]+$/.test(plateNumber)) {
+            alert("Please enter a valid Vehicle Plate Number.");
             return false;
         }
 
-       
         alert("Form successfully submitted!");
         return true;
     }
-
 </script>
 
 </body>
