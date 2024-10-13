@@ -48,6 +48,7 @@ body, html {
 }
 .trace-logo{
     margin-top: 70px;
+    display: none;
 }
 h1 {
     font-size: 2.5em;
@@ -380,6 +381,8 @@ footer {
         max-width: 100%;  /* Fills available space */
         padding: 20px;
       }
+      .trace-logo {
+          display: block;
       
       /* Features using flexbox */
       .features {
