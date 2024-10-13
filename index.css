@@ -383,6 +383,7 @@ footer {
       }
       .trace-logo {
           display: block;
+          margin: 6em;
       
       /* Features using flexbox */
       .features {
